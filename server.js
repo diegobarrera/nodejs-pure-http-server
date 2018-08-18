@@ -22,7 +22,7 @@ function sendResponse(url, contentType, res){
       res.writeHead(404);
       res.write(`File '${file}' Not Found!`);
       res.end();
-      console.log("Response: 404 ${file}, err");
+      console.log(`Response: 404 ${file}, err`);
     }else{
       res.writeHead(200, {'Content-Type': contentType});
       res.write(content);
